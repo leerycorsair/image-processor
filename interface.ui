@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1021</width>
+    <height>780</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Image Betterificator</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_6">
+    <item>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QGroupBox" name="groupBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="title">
+         <string>Original</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QLabel" name="original_img_label">
+           <property name="text">
+            <string>Image</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="title">
+         <string>Preview</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <widget class="QLabel" name="preview_img_label">
+           <property name="text">
+            <string>Image</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="1">
+       <widget class="QFrame" name="image_deconvolution_frame">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QLabel" name="id_label">
+           <property name="text">
+            <string>Image Deconvolution</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="id_method_cb">
+           <item>
+            <property name="text">
+             <string>Richardson-Lucy Method</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Wiener Method</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="id_button">
+           <property name="text">
+            <string>Apply</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QFrame" name="noise_canceling_frame">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QLabel" name="nc_label">
+           <property name="text">
+            <string>Noise Canceling</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="nc_method_cb">
+           <item>
+            <property name="text">
+             <string>Mean</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Median</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Bilateral</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="nc_footprint_cb">
+           <item>
+            <property name="text">
+             <string>Disk 1</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Disk 5</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Disk 10</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Square 3</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Square 5</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Square 7</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="nc_button">
+           <property name="text">
+            <string>Apply</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QFrame" name="upscaling_frame">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QLabel" name="us_label">
+           <property name="text">
+            <string>Upscaling</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="us_method_cb">
+           <item>
+            <property name="text">
+             <string>ESPCN_x2</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ESPCN_x3</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ESPCN_x4</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>EDSR_x2</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>EDSR_x3</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>EDSR_x4</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>FSRCNN_x2</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>FSRCNN_x3</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>FSRCNN_x4</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>LapSRN_x2</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>LapSRN_x4</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>LapSRN_x8</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="us_button">
+           <property name="text">
+            <string>Apply</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1021</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuExamples">
+    <property name="title">
+     <string>Examples</string>
+    </property>
+    <addaction name="actionAstronaut"/>
+    <addaction name="actionBrick"/>
+    <addaction name="actionCat"/>
+    <addaction name="actionCoins"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionAbout_program"/>
+    <addaction name="actionAbout_creator"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <widget class="QMenu" name="menuAdd_Noise">
+     <property name="title">
+      <string>Add Noise</string>
+     </property>
+     <addaction name="actionGaussian"/>
+     <addaction name="actionLocalvar"/>
+     <addaction name="actionPoisson"/>
+     <addaction name="actionSalt"/>
+     <addaction name="actionPepper"/>
+     <addaction name="actionS_P"/>
+     <addaction name="actionSpeckle"/>
+    </widget>
+    <addaction name="menuAdd_Noise"/>
+    <addaction name="actionBlur_Image"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuExamples"/>
+   <addaction name="menuTools"/>
+   <addaction name="menuAbout"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open ...</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionBlur_Image">
+   <property name="text">
+    <string>Blur Image</string>
+   </property>
+  </action>
+  <action name="actionGaussian">
+   <property name="text">
+    <string>Gaussian</string>
+   </property>
+  </action>
+  <action name="actionLocalvar">
+   <property name="text">
+    <string>Localvar</string>
+   </property>
+  </action>
+  <action name="actionPoisson">
+   <property name="text">
+    <string>Poisson</string>
+   </property>
+  </action>
+  <action name="actionSalt">
+   <property name="text">
+    <string>Salt</string>
+   </property>
+  </action>
+  <action name="actionPepper">
+   <property name="text">
+    <string>Pepper</string>
+   </property>
+  </action>
+  <action name="actionS_P">
+   <property name="text">
+    <string>Salt and Pepper</string>
+   </property>
+  </action>
+  <action name="actionSpeckle">
+   <property name="text">
+    <string>Speckle</string>
+   </property>
+  </action>
+  <action name="actionSave_Path">
+   <property name="text">
+    <string>Save Path</string>
+   </property>
+  </action>
+  <action name="actionAbout_program">
+   <property name="text">
+    <string>About program</string>
+   </property>
+  </action>
+  <action name="actionAbout_creator">
+   <property name="text">
+    <string>About creator</string>
+   </property>
+  </action>
+  <action name="actionAstronaut">
+   <property name="text">
+    <string>Astronaut</string>
+   </property>
+  </action>
+  <action name="actionBrick">
+   <property name="text">
+    <string>Brick</string>
+   </property>
+  </action>
+  <action name="actionCat">
+   <property name="text">
+    <string>Cat</string>
+   </property>
+  </action>
+  <action name="actionCoins">
+   <property name="text">
+    <string>Coins</string>
+   </property>
+  </action>
+  <action name="actionPSF">
+   <property name="text">
+    <string>PSF</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
